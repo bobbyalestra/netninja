@@ -40,3 +40,14 @@ deleteBtn.classList.add('delete')
     li.appendChild(deleteBtn)
     list.appendChild(li)
     
+
+    // hide books
+
+    const hideBox = document.querySelector('#hide');
+    hideBooks.addEventListener('change', function(e){
+        if(hideBox.checked){
+            list.style.display= 'none'
+        }else{
+            list.style.display= 'initlal'
+        }
+    })
