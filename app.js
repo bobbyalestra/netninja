@@ -61,7 +61,7 @@ deleteBtn.classList.add('delete')
 
         const books = list.getElementsByTagName('li');
 
-        Array.from(books).forEach(book){
+        Array.from(books).forEach(book);{
             const title = book.firstElementChild.textContent;
 
             if(title.toLowerCase().indexOf(term) != -1){
