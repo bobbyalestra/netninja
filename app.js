@@ -44,10 +44,33 @@ deleteBtn.classList.add('delete')
     // hide books
 
     const hideBox = document.querySelector('#hide');
-    hideBooks.addEventListener('change', function(e){
+    hideBox .addEventListener('change', function(e){
         if(hideBox.checked){
             list.style.display= 'none'
         }else{
             list.style.display= 'initlal'
         }
+    })
+
+
+
+   // how to make a searchbaR
+    const searchBar = document.forms['search-books'].querySelector('input');
+    searchBar.addEventListener('keyup', function(e){
+        const term = e.target.value.toLowerCase();
+
+        const books = list.getElementsByTagName('li');
+
+        Array.from(books).forEach(book){
+            const title = book.firstElementChild.textContent;
+
+            if(title.toLowerCase().indexOf(term) != -1){
+                book.style.display = 'block';
+            }else{
+                book.style.display = 'none';
+            }
+        }
+
+
+
     })
