@@ -23,7 +23,7 @@ addForm.addEventListener('Submit', function(e){
 
 const li = document.createElement('li')
 const bookName = document.createElement('span')
-const btn = document.createElement('span')
+const deleteBtn = document.createElement('span')
 
 //add text
 deleteBtn.textContent = 'delete'
