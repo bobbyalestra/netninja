@@ -30,6 +30,10 @@ deleteBtn.textContent = 'delete'
 bookName.textContent = value;
 
 
+// add classes
+
+bookName.classList.add('name');
+deleteBtn.classList.add('delete')
     // append to DOM
 
     li.appendChild(bookName)
