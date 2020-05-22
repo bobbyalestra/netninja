@@ -33,17 +33,15 @@ deleteBtn.classList.add('delete')
 })
 
 
-
-    // hide books
-
     const hideBox = document.querySelector('#hide');
+    
     hideBox.addEventListener('change', function(e){
         if(hideBox.checked){
             list.style.display= 'none'
         }else{
             list.style.display= 'initlal'
         }
-    })
+    )}
 
 
 
