@@ -41,7 +41,7 @@ deleteBtn.classList.add('delete')
         }else{
             list.style.display= 'initlal'
         }
-    )}
+    })
 
 
 
