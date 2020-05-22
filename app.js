@@ -43,7 +43,7 @@ deleteBtn.classList.add('delete')
         }
     })
 
-
+let table = table
 
    // how to make a searchbaR
     const searchBar = document.forms['search-books'].querySelector('input');
