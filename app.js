@@ -6,32 +6,22 @@ if(e.target.className == 'delete'){
     const li =e.target.parentElement;
     list.removeChild(li);
 }
-})
+
+
 
 // add button
 
-const addForm = document.forms['add-book'];
+const addForm = document.forms['add-book']
 
-addForm.addEventListener('Submit', function(e){
+addForm.addEventListener('submit',function(e){
     e.preventDefault();
-    const value = document.querySelector('input[type = "text"]').value
-   
-})
-
-
-// create element
-
-const li = document.createElement('li')
-const bookName = document.createElement('span')
-const deleteBtn = document.createElement('span')
-
-//add text
-deleteBtn.textContent = 'delete'
-bookName.textContent = value;
-
-
-// add classes
-
+    const value = addForm.querySelector('input[type = "text"]').value
+    bookName.textContent = value;
+    const li = document.createElement('li')
+    const bookName = document.createElement('span')
+    const deleteBtn = document.createElement('span')
+    deleteBtn.textContent = 'delete'
+    
 bookName.classList.add('name');
 deleteBtn.classList.add('delete')
     // append to DOM
@@ -40,11 +30,14 @@ deleteBtn.classList.add('delete')
     li.appendChild(deleteBtn)
     list.appendChild(li)
     
+})
+
+
 
     // hide books
 
     const hideBox = document.querySelector('#hide');
-    hideBox .addEventListener('change', function(e){
+    hideBox.addEventListener('change', function(e){
         if(hideBox.checked){
             list.style.display= 'none'
         }else{
@@ -56,6 +49,7 @@ deleteBtn.classList.add('delete')
 
    // how to make a searchbaR
     const searchBar = document.forms['search-books'].querySelector('input');
+    
     searchBar.addEventListener('keyup', function(e){
         const term = e.target.value.toLowerCase();
 
@@ -71,6 +65,6 @@ deleteBtn.classList.add('delete')
             }
         }
 
-
+    })
 
     })
