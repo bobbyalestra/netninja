@@ -6,7 +6,7 @@ if(e.target.className == 'delete'){
     const li =e.target.parentElement;
     list.removeChild(li);
 }
-
+})
 
 
 // add button
@@ -15,22 +15,21 @@ const addForm = document.forms['add-book']
 
 addForm.addEventListener('submit',function(e){
     e.preventDefault();
-    const value = addForm.querySelector('input[type = "text"]').value
-    bookName.textContent = value;
+    const value = addForm.querySelector('input[type="text"]').value;
     const li = document.createElement('li')
-    const bookName = document.createElement('span')
-    const deleteBtn = document.createElement('span')
-    deleteBtn.textContent = 'delete'
-    
-bookName.classList.add('name');
-deleteBtn.classList.add('delete')
-    // append to DOM
+   const bookName = document.createElement('span')
+   bookName.textContent = value;
+   const deleteBtn = document.createElement('span')
+   deleteBtn.textContent = 'delete'
+   
+   bookName.classList.add('name');
+   deleteBtn.classList.add('delete');
 
-    li.appendChild(bookName)
-    li.appendChild(deleteBtn)
-    list.appendChild(li)
+   li.appendChild(bookName);
+   li.appendChild(deleteBtn);
+   list.appendChild(li);
+});
     
-})
 
 
     const hideBox = document.querySelector('#hide');
@@ -39,11 +38,11 @@ deleteBtn.classList.add('delete')
         if(hideBox.checked){
             list.style.display= 'none'
         }else{
-            list.style.display= 'initlal'
+            list.style.display= 'initial'
         }
     })
 
-let table = table
+
 
    // how to make a searchbaR
     const searchBar = document.forms['search-books'].querySelector('input');
@@ -65,4 +64,4 @@ let table = table
 
     })
 
-    })
+  
