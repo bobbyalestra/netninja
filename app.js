@@ -1,4 +1,6 @@
-const list = document.querySelector('#book-list ul');
+document.addEventListener('DOMContentLoaded', function(){
+
+    const list = document.querySelector('#book-list ul');
 
 //delete button
 list.addEventListener('click', function(e){
@@ -45,7 +47,7 @@ addForm.addEventListener('submit',function(e){
 
 
    // how to make a searchbaR
-   const searchBar = forms['search-books'].querySelector('input');
+   const searchBar = document.forms['search-books'].querySelector('input');
   searchBar.addEventListener('keyup', (e) => {
     const term = e.target.value.toLowerCase();
     const books = list.getElementsByTagName('li');
@@ -74,4 +76,7 @@ addForm.addEventListener('submit',function(e){
       });
     }
   });
+
+
+})
 
